@@ -194,7 +194,7 @@ class Robot
     @connect.listen process.env.PORT || 8080
 
     setInterval =>
-      HttpClient.create("http://localhost:#{process.env.PORT || 8080}/hubot/ping")
+      HttpClient.create("http://high-warrior-6993.herokuapp.com/hubot/ping")
         .post() (err, res, bod) =>
           @logger.info "Keep alive ping!"
     , 1200000
